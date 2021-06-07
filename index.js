@@ -12,7 +12,7 @@ userName.addEventListener("keyup", function () {
   const min_chars = 6;
   const max_chars = 12;
   if (/[^a-zA-Z\ö\ç\ş\ı\ğ\ü\Ö\Ç\Ş\İ\Ğ\Ü\ ]/.test(userName.value)) {
-    feedback.innerHTML = "Should'nt include speacial characters!";
+    feedback.innerHTML = "Shouldn't include speacial characters!";
     userName.value = userName.value.substring(0, userName.value.length -1);
   } else if (userName.value.length<min_chars) {
     feedback.innerHTML = "Should have a min length of 6 characters!";
