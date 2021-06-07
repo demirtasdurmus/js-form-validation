@@ -68,15 +68,15 @@ phone.addEventListener('input', function (e) {
 
 submit.addEventListener("click", function (e) {
   e.preventDefault();
-  const userName = userName.value;
-  const gender = genderType;
+  const nameToDisplay = userName.value;
+  const genderToDisplay = genderType;
   const productType = products[0].options[products[0].selectedIndex].value;
-  const date =  date.value.split('-').reverse().join('-');
-  const phone = phone.value;
+  const dateToDisplay =  date.value.split('-').reverse().join('-');
+  const phoneToDisplay = phone.value;
   
-  console.log(`Adı-Soyadı: ${userName}`);
-  console.log(`Cinsiyet: ${gender}`);
+  console.log(`Adı-Soyadı: ${nameToDisplay}`);
+  console.log(`Cinsiyet: ${genderToDisplay}`);
   console.log(`Ürün: ${productType}`);
-  console.log(`Tarih: ${date}`);
-  console.log(`Telefon: ${phone}`);
+  console.log(`Tarih: ${dateToDisplay}`);
+  console.log(`Telefon: ${phoneToDisplay}`);
 });
