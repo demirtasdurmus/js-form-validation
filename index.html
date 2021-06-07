@@ -20,22 +20,23 @@
 <body>
 
     <div class="col-6 offset-3 mt-5">
-        <h1 class="text-center">BAŞVURU FORMU</h1>
+        <h1 class="text-center">FORM</h1>
         <form id="form" class="needs-validation">
             <div class="mb-2">
-                <label class="from-label" for="name">İsim</label>
-                <input class="form-control" type="text" name="name" id="name" value="" minlength="6" maxlength="12" required>
+                <label class="from-label" for="name">Name</label>
+                <input class="form-control" type="text" name="name" id="name" value="" minlength="6" maxlength="12"
+                    required>
                 <span class="feedback"></span>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="male" value="erkek">
-                Erkek
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                Male
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="female" value="kadın">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
                 <label class="form-check-label" for="female">
-                    Kadın
+                 Female
                 </label>
             </div>
 
@@ -45,19 +46,19 @@
             </select>
 
             <div class="mb-2">
-                <label class="form-label" for="date">Tarih</label>
-                <input class="form-control" type="date" name="date" id="date"  onkeydown="return false" required>
+                <label class="form-label" for="date">Date</label>
+                <input class="form-control" type="date" name="date" id="date" onkeydown="return false" required>
             </div>
             <div class="mb-2">
-                <label class="form-label" for="phone">Telefon</label>
+                <label class="form-label" for="phone">Phone</label>
                 <input class="form-control" type="text" name="phone" id="phone" value="" pattern=""
                     placeholder="0 555 555 55 55" required>
             </div>
             <div class="text-center mb-2">
-                <button class="btn btn-lg btn-success" id="submit" type="submit">Başvur</button>
+                <button class="btn btn-lg btn-success" id="submit" type="submit">Submit</button>
             </div>
             <div class="mb-2">
-                <h4 class="text-center">Formu gönderdiğinizde bilgiler için Console a bakınız!</h1>
+                <h4 class="text-center">Check the console after submitiing the form.</h1>
             </div>
         </form>
     </div>

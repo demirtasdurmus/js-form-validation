@@ -1,5 +1,5 @@
 const phone = document.querySelector("#phone");
-const isim = document.querySelector("#name");
+const userName = document.querySelector("#name");
 const feedback = document.querySelector(".feedback");
 const gender = document.getElementsByName("gender");
 const products = document.querySelectorAll("#products");
@@ -8,16 +8,16 @@ const submit = document.querySelector("#submit");
 const form = document.querySelector("#form");
 //Name Validation**********************************************
 
-isim.addEventListener("keyup", function () {
+userName.addEventListener("keyup", function () {
   const min_chars = 6;
   const max_chars = 12;
-  if (/[^a-zA-Z\ö\ç\ş\ı\ğ\ü\Ö\Ç\Ş\İ\Ğ\Ü\ ]/.test(isim.value)) {
-    feedback.innerHTML = "İsim özel karakter içermemelidir!";
-    isim.value = isim.value.substring(0, isim.value.length -1);
-  } else if (isim.value.length<min_chars) {
-    feedback.innerHTML = "İsim uzunluğu en az 6 karakter olmalıdır!";
-  } else if (isim.value.length>=max_chars) {
-    feedback.innerHTML = "İsim uzunluğu en fazla 12 karakter olmalıdır!";
+  if (/[^a-zA-Z\ö\ç\ş\ı\ğ\ü\Ö\Ç\Ş\İ\Ğ\Ü\ ]/.test(userName.value)) {
+    feedback.innerHTML = "Should'nt include speacial characters!";
+    userName.value = userName.value.substring(0, userName.value.length -1);
+  } else if (userName.value.length<min_chars) {
+    feedback.innerHTML = "Should have a min length of 6 characters!";
+  } else if (userName.value.length>=max_chars) {
+    feedback.innerHTML = "Should have a max length of 12 characters!";
   } else {
     feedback.innerHTML = "";
   };
@@ -31,7 +31,7 @@ gender.forEach(el => {
 
   let items;
 
-  if (genderType === "erkek") {
+  if (genderType === "male") {
     products[0].options.length = 0;
     items= ["Coat", "Belt", "Pants", "Tie"];
 
@@ -68,15 +68,15 @@ phone.addEventListener('input', function (e) {
 
 submit.addEventListener("click", function (e) {
   e.preventDefault();
-  const adSoyad = isim.value;
-  const cinsiyet = genderType;
+  const userName = userName.value;
+  const gender = genderType;
   const productType = products[0].options[products[0].selectedIndex].value;
-  const tarih =  date.value.split('-').reverse().join('-');
-  const telefon = phone.value;
+  const date =  date.value.split('-').reverse().join('-');
+  const phone = phone.value;
   
-  console.log(`Adı-Soyadı: ${adSoyad}`);
-  console.log(`Cinsiyet: ${cinsiyet}`);
+  console.log(`Adı-Soyadı: ${userName}`);
+  console.log(`Cinsiyet: ${gender}`);
   console.log(`Ürün: ${productType}`);
-  console.log(`Tarih: ${tarih}`);
-  console.log(`Telefon: ${telefon}`);
+  console.log(`Tarih: ${date}`);
+  console.log(`Telefon: ${phone}`);
 });
