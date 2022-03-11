@@ -16,7 +16,7 @@ Build a submission form using JS
 
 Note: You can console.log all the inputs after submission
 
-- example output:
+example output:
  * Adı-Soyadı: John Doe
  * Cinsiyet: male
  * Ürün: Pants
