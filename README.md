@@ -17,8 +17,8 @@ Build a submission form using JS
 Note: You can console.log all the inputs after submission
 
 example output:
-Adı-Soyadı: John Doe
-Cinsiyet: male
-Ürün: Pants
-Tarih: 12-03-2022
-Telefon:  0 555 555 55 55
+*Adı-Soyadı: John Doe
+*Cinsiyet: male
+*Ürün: Pants
+*Tarih: 12-03-2022
+*Telefon:  0 555 555 55 55
